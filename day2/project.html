@@ -13,24 +13,35 @@
     <title>www.coding class</title>
 </head>
 
-<body>
-    <ul class="nav justify-content-end navbar-expand-lg nav-dark bg-dark float-none">
-        <li class="nav-item">
-            <a class="nav-link active" href="#">Why us</a>
+<body> 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        
+    
+        
+            <a class="nav-link navbar-brand " href="#">Register now</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+       
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <li class="nav-item ">
+            <a class="nav-link active navbar-brand" href="#">Why us<span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+        <li class="nav-item ">
+            <a class="nav-link navbar-brand" href="#">About</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link " href="#">Register now</a>
-        </li>
-    </ul>
+    </div>
+       
+    
+
+</nav>
 
     <body>
 
         <!-- Begin page content -->
 
-        <div class="container  text-white bg-dark">
+        <div class="container  text-white bg-info">
             <div class=" my-4">
                 <div class="row mb-4">
                     <div class="col-md-5">
@@ -51,7 +62,7 @@
                     </div>
                     <div class="col-md-6 ">
                         <div class="card flex-md-row mb-4 box-shadow h-md-250">
-                            <form class="container text-white bg-dark">
+                            <form class="container text-primary bg-white">
                                 <div class="col-mb-15 ">
                                     <label for="exampleInputEmail1" class="form-label">Email address</label>
                                     <input type="email" class="form-control" id="exampleInputEmail1"
@@ -87,8 +98,8 @@
                                 <h3 class="mb-0">
                                     <a class="text-light" href="#">Classes</a>
                                 </h3>
-                                <img class="card-img-right flex-auto d-none d-md-block"
-                                    data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [500x350]"
+                                <img class="img-fluid"
+                                    data-src="holder.js/200x250?theme=thumb" alt="Responsive image"
                                     style="width: 500px; height: 350px;" src="./Frame1.png" data-holder-rendered="true">
                                 <div>
                                     <h3>this is image file </h3>
@@ -106,8 +117,8 @@
                                 <h3 class="mb-0">
                                     <a class="text-light" href="/">About Project</a>
                                 </h3>
-                                <img class="card-img-right flex-auto d-none d-md-block"
-                                    data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [500x350]"
+                                <img class="img-fluid"
+                                    data-src="holder.js/200x250?theme=thumb" alt="Responsive image"
                                     style="width: 500px; height: 350px;" src="./Fram2.png" data-holder-rendered="true">
                             </div>
                             <div>
@@ -127,9 +138,9 @@
                                     <h3 class="mb-0">
                                         <a class="text-light" href="#">Classes plateform</a>
                                     </h3>
-                                    <img class="card-img-right flex-auto d-none d-md-block"
-                                        data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [500x350]"
-                                        style="width: 500px; height: 350px;" src="./Frame3.png"
+                                    <img class="img-fluid" 
+                                        data-src="holder.js/200x250?theme=thumb" alt="Responsive image"
+                                        style="width: 500px; height: 350px;" class="img-fluid" src="./Frame3.png"
                                         data-holder-rendered="true">
                                     <div>
                                         <h3>Teacher layout</h3>
@@ -148,12 +159,12 @@
                                     <h3 class="mb-0">
                                         <a class="text-light" href="/">Search</a>
                                     </h3>
-                                    <img class="card-img-right flex-auto d-none d-md-block"
-                                        data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [500x350]"
+                                    <img class="img-fluid"
+                                        data-src="holder.js/200x250?theme=thumb" alt="Responsive image"
                                         style="width: 500px; height: 350px;" src="./Frame4.png"
                                         data-holder-rendered="true">
                                 </div>
-                                <div>
+                                <div class="img-fluid">
                                     <h3> layout</h3>
                                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem eaque minus
                                     mollitia architecto libero inventore. Harum hic magni doloremque ipsa, unde iure
@@ -163,14 +174,19 @@
 
                             </div>
                         </div>
-                        <div class="">
-                            <img src="./Group video-amico 1.png" alt=""style="width: 500px; height: 350px; border-radius: 50%">
-  <div class="container" style="width: 50%; bottom:20px">
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt praesentium nobis nihil. Obcaecati explicabo ducimus quibusdam distinctio quidem dicta placeat provident deserunt nisi dignissimos iusto corporis, cum suscipit fugit a?
-  </div>
-                        </div>
-                        
-
+                        <div class="row featurette d-flex justify-content-center align-items-center">
+                            <div class="col-md-7 order-md-2">
+                                <h2 class="featurette-heading">Beach <span class="text-muted">It’ll blow your
+                                        mind.</span></h2>
+                                <p class="lead">A beach is a landform alongside a body of water which consists of loose particles. The
+                                    particles composing a beach are typically made from rock, such as sand, gravel, shingle, pebbles</p>
+                            </div>
+                            <div class="col-md-5 order-md-1">
+                                <img class="img-fluid" style="border-radius: 50%; hight: 350px;width: 500px;" src="./Group video-amico 1.png" alt="">
+                
+                
+                            </div>
+                        </div
 
 
                         <!-- Optional JavaScript -->
