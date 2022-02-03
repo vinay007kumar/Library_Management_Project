@@ -1,0 +1,24 @@
+hr{
+        
+    color: #37e714a9;
+    width: 50%;
+    border: 2px dotted;
+    
+    border-width: 5px;
+}
+h2 , h3{
+ color: blueviolet;
+
+}
+tr{
+    color: red;
+}
+i{
+    color: blue;
+}
+td{
+    color: black;
+}
+body{
+    background-color: palegreen;
+}
