@@ -2,29 +2,29 @@ import React, { useState } from 'react'
 import { unstable_renderSubtreeIntoContainer } from 'react-dom/cjs/react-dom.development'
 
 export default function About() {
-//      const[mystyle , setMystyle] = useState({
-//         color: 'white',
-//         backgroundColor: 'black'
+    const[mystyle , setMystyle] = useState({
+        color: 'white',
+        backgroundColor: 'black'
 
-//     })
-// const[Btntext, setbtntext] = useState('Enable dark mode')
-//    const togglestyle=()=>{
-//       if(mystyle.color ==='white') {
-//          setMystyle({
-//              color:'black',
-//              backgroundColor:'white'
+    })
+ const [Btntext, setbtntext] = useState('Enable dark mode')
+   const togglestyle=()=>{
+     if(mystyle.color ==='white') {
+       setMystyle({
+              color:'black',
+             backgroundColor:'white'
              
-//          })
-//          setbtntext("Enable light mode")
-//       } else{
-//           setMystyle({
-//               color:'white',
-//               backgroundColor:'black'
-//           })
-//           setbtntext("Enable light mode")
-//       }
+        })
+        setbtntext("Enable light mode");
+    } else{
+          setMystyle({
+               color:'white',
+               backgroundColor:'black'
+          })
+           setbtntext("Enable light mode");
+   }
        
-//    }
+   }
     return (
        
         <div className="container" style={mystyle}>

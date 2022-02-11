@@ -5,17 +5,20 @@ export default function Textform(props) {
         // console.log("Upercase was click" +text)
         let newText =text.toUpperCase();
         setText(newText)
+        props.shoAlertsss("Converted to uppercase","success")
     }
     const handleLoclick = ()=> {
         // console.log("Upercase was click" +text)
         let newText =text.toLowerCase();
         setText(newText)
+        props.shoAlertsss("Converted to Lowercase","success")
     }
 
     const handleclearclick = ()=> {
         // console.log("Upercase was click" +text)
         let newText =('');
         setText(newText)
+        props.shoAlertsss(" ClearText","success")
     }
 
     
@@ -32,10 +35,12 @@ export default function Textform(props) {
         text.select();
         
         navigator.clipboard.writeText(text.value);
+        props.shoAlertsss("CopyText","success")
     }
 const handleExtraspace =()=>{       //==>Arrow function
 let newText = text.split(/[ ]+/ );
 setText(newText.join(" "));
+props.shoAlertsss("ExtraSpace ","success")
 }
 
 
@@ -57,7 +62,7 @@ setText(newText.join(" "));
 <p>{text.split(" ").length} words and {text.length} characters</p>
 <p>{0.008* text.split(" ").length} Minutes to Read</p>
 <h2>Preview</h2>
-<p>{text}</p>
+<p>{text.length>0?text:"Enter Something in the textbox above to preview it here"}</p>
 </div>
 </>
     );
