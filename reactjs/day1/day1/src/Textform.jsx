@@ -47,7 +47,7 @@ props.shoAlertsss("ExtraSpace ","success")
     const [text, setText] = useState('');
     return (
   <>
-<div className= "my-3 container" style={{color:props.mode==='light'?'gray':'white'}}>
+<div className= "my-3 container" style={{color:props.mode==='light'?'gray':'gray'}}>
 <h1>{props.heading}</h1>
 
 <textarea className="form-control" value={text} onChange={handleonchange} style={{backgroundColor:props.mode==='light'?'white':'gray', color:props.mode==='dark'?'white':'black'}} id="mytext" rows="8"></textarea><br />
@@ -57,7 +57,7 @@ props.shoAlertsss("ExtraSpace ","success")
 <button className="btn btn-success mx-2" onClick={handlecopy}>Copy text</button>
 <button className="btn btn-success mx-2" onClick={handleExtraspace}>Extra text</button>
 </div>
-<div className="container my-3" style={{color:props.mode==='light'?'gray':'white'}} >
+<div className="container my-3" style={{color:props.mode==='light'?'gray':'gray'}} >
 <h1>Your text summary</h1>
 <p>{text.split(" ").length} words and {text.length} characters</p>
 <p>{0.008* text.split(" ").length} Minutes to Read</p>

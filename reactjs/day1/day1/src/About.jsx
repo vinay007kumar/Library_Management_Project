@@ -21,7 +21,7 @@ export default function About() {
                 color: 'white',
                 backgroundColor: 'black'
             })
-            setbtntext("Enable light mode");
+            setbtntext("Enable dark mode");
         }
 
     }
@@ -47,7 +47,7 @@ export default function About() {
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingTwo">
                         <button className="accordion-button collapsed" style={mystyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Contents
+                            Contents
                         </button>
                     </h2>
                     <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -65,19 +65,19 @@ export default function About() {
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingThree">
                         <button className="accordion-button collapsed" style={mystyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Definition
+                            Definition
                         </button>
                     </h2>
                     <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                         <div className="accordion-body" style={mystyle}>
                             <strong>This is the third item's accordion body.</strong> Since the standardized markup such as ANSI escape codes are generally invisible to the editor, they comprise a set of transitory properties that become at times indistinguishable from word processing. But the definite distinctions from word processing are that text processing proper:
 
-represents "text processing utilities", not just "text editing" applications.
-is much more "the keyboard way", as opposed to "the mouse way" (e.g. drag and drop, cut and paste) of initiating an edit.
-is sequential access rather than random access in approach.
-operates directly at the presentation layer rather than indirectly at the application layer.
-works raw data that is standardized and works more openly rather than tending towards any proprietary methods.
-In this way markup such as font and color are not really a distinguishing factor, because the character sequences that affect font and color are simply standard characters inserted automatically by a background text processing mode, made to work transparently by compliant text editors, yet becoming otherwise visible as text processing commands when that mode is not in effect. So text processing is defined most basically (but not entirely) around the visual characters (or graphemes) rather than the standard, yet invisible characters. <code>.accordion-body</code>, though the transition does limit overflow.
+                            represents "text processing utilities", not just "text editing" applications.
+                            is much more "the keyboard way", as opposed to "the mouse way" (e.g. drag and drop, cut and paste) of initiating an edit.
+                            is sequential access rather than random access in approach.
+                            operates directly at the presentation layer rather than indirectly at the application layer.
+                            works raw data that is standardized and works more openly rather than tending towards any proprietary methods.
+                            In this way markup such as font and color are not really a distinguishing factor, because the character sequences that affect font and color are simply standard characters inserted automatically by a background text processing mode, made to work transparently by compliant text editors, yet becoming otherwise visible as text processing commands when that mode is not in effect. So text processing is defined most basically (but not entirely) around the visual characters (or graphemes) rather than the standard, yet invisible characters. <code>.accordion-body</code>, though the transition does limit overflow.
                         </div>
                     </div>
                 </div>
