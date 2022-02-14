@@ -49,7 +49,6 @@ function App() {
       setInterval(() => {
         document.title = 'textUtile-install the textUtiles mode';
       }, 3000);
-
     }
     else {
       setMode('light');
