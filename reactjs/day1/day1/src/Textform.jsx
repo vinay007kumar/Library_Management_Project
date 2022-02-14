@@ -1,6 +1,7 @@
 import React, { useState }  from 'react'
 
 export default function Textform(props) {
+    
     const handleUpclick = ()=> {                    //arrow Function
         // console.log("Upercase was click" +text)
         let newText =text.toUpperCase();
@@ -48,19 +49,19 @@ props.shoAlertsss("ExtraSpace ","success")
     return (
   <>
 <div className= "my-3 container" style={{color:props.mode==='light'?'gray':'gray'}}>
-<h1>{props.heading}</h1>
+<h1 className='mb-2'>{props.heading}</h1>
 
-<textarea className="form-control" value={text} onChange={handleonchange} style={{backgroundColor:props.mode==='light'?'white':'gray', color:props.mode==='dark'?'white':'black'}} id="mytext" rows="8"></textarea><br />
-<button className="btn btn-primary mx-2"onClick={handleUpclick}>Convert to uppercase</button>   
-<button className="btn btn-secondary mx-2"onClick={ handleLoclick }>Convert to Lowercase</button>  
-<button className="btn btn-success mx-2" onClick={handleclearclick}>Clear to text</button>
-<button className="btn btn-success mx-2" onClick={handlecopy}>Copy text</button>
-<button className="btn btn-success mx-2" onClick={handleExtraspace}>Extra text</button>
+<textarea className="form-control" value={text} onChange={handleonchange} style={{backgroundColor:props.mode==='dark'?'white':'#5cada6', color:props.mode==='dark'?'white':'black'}} id="mytext" rows="8"></textarea><br />
+<button disabled={text.length===0}className="btn btn-primary mx-1 my-1"onClick={handleUpclick}>Convert to uppercase</button>   
+<button disabled={text.length===0}className="btn btn-secondary mx-1 my-1"onClick={ handleLoclick }>Convert to Lowercase</button>  
+<button disabled={text.length===0}className="btn btn-success mx-1 my-1" onClick={handleclearclick}>Clear to text</button>
+<button disabled={text.length===0}className="btn btn-success mx-1 my-1" onClick={handlecopy}>Copy text</button>
+<button disabled={text.length===0}className="btn btn-success mx-1 my-1" onClick={handleExtraspace}>Extra text</button>
 </div>
 <div className="container my-3" style={{color:props.mode==='light'?'gray':'gray'}} >
 <h1>Your text summary</h1>
-<p>{text.split(" ").length} words and {text.length} characters</p>
-<p>{0.008* text.split(" ").length} Minutes to Read</p>
+<p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
+<p>{0.008* text.split(" ").filter((element)=>{return element.length!==0}).length} Minutes to Read</p>
 <h2>Preview</h2>
 <p>{text.length>0?text:"Enter Something in the textbox above to preview it here"}</p>
 </div>
