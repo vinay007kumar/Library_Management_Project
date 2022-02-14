@@ -68,8 +68,8 @@ function App() {
       <div className="container my-3">
 
       <Routes>
-          <Route path="/about" element={<About/>}/>
-          <Route path="/" element={<Textform shoAlertsss={shoAlertsss} heading="Enter your text" mode={mode} /> }>
+          <Route exact path="/about" element={<About/>}/>
+          <Route  exact path="/" element={<Textform shoAlertsss={shoAlertsss} heading="Enter your text" mode={mode} /> }>
             
           </Route>
           </Routes>
