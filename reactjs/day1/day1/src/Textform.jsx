@@ -32,10 +32,9 @@ export default function Textform(props) {
 
     const handlecopy =()=>{          //==>Arrow function
        
-        var text = document.getElementById("mytext");
-        text.select();
         
-        navigator.clipboard.writeText(text.value);
+        navigator.clipboard.writeText(text);
+        document.getSelection().removeAllRanges();
         props.shoAlertsss("CopyText","success")
     }
 const handleExtraspace =()=>{       //==>Arrow function
@@ -51,7 +50,7 @@ props.shoAlertsss("ExtraSpace ","success")
 <div className= "my-3 container" style={{color:props.mode==='light'?'gray':'gray'}}>
 <h1 className='mb-2'>{props.heading}</h1>
 
-<textarea className="form-control" value={text} onChange={handleonchange} style={{backgroundColor:props.mode==='dark'?'white':'#5cada6', color:props.mode==='dark'?'white':'black'}} id="mytext" rows="8"></textarea><br />
+<textarea className="form-control" value={text} onChange={handleonchange} style={{backgroundColor:props.mode==='dark'?'white':'#5cada6', color:props.mode==='white'?'dark':'black'}} id="mytext" rows="8"></textarea><br />
 <button disabled={text.length===0}className="btn btn-primary mx-1 my-1"onClick={handleUpclick}>Convert to uppercase</button>   
 <button disabled={text.length===0}className="btn btn-secondary mx-1 my-1"onClick={ handleLoclick }>Convert to Lowercase</button>  
 <button disabled={text.length===0}className="btn btn-success mx-1 my-1" onClick={handleclearclick}>Clear to text</button>
@@ -60,7 +59,7 @@ props.shoAlertsss("ExtraSpace ","success")
 </div>
 <div className="container my-3" style={{color:props.mode==='light'?'gray':'gray'}} >
 <h1>Your text summary</h1>
-<p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
+<p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
 <p>{0.008* text.split(" ").filter((element)=>{return element.length!==0}).length} Minutes to Read</p>
 <h2>Preview</h2>
 <p>{text.length>0?text:"Enter Something in the textbox above to preview it here"}</p>
