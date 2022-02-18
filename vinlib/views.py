@@ -1,3 +1,38 @@
+
+from vinlib.models import Vinlib
+from vinlib.permissions import IsOwnerOrReadOnly
+from vinlib.serializers import UserSerializer, VinlibSerializer
+from rest_framework import generics
+from django.contrib.auth.models import User
+from rest_framework import permissions
+
+class VinlibList(generics.ListCreateAPIView):
+    queryset = Vinlib.objects.all()
+    serializer_class = VinlibSerializer
+    
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
+    
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+
+class VinlibDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Vinlib.objects.all()
+    serializer_class = VinlibSerializer
+    
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly]
+    
+
+class UserList(generics.ListAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+
+class UserDetail(generics.RetrieveAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+
 # # from django.shortcuts import render
 
 # # from django.http import HttpResponse, JsonResponse
@@ -183,17 +218,3 @@
 # # # def vinlib_detail(request, pk, format=None):
     
 
-
-from vinlib.models import Vinlib
-from vinlib.serializers import VinlibSerializer
-from rest_framework import generics
-
-
-class VinlibList(generics.ListCreateAPIView):
-    queryset = Vinlib.objects.all()
-    serializer_class = VinlibSerializer
-
-
-class VinlibDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Vinlib.objects.all()
-    serializer_class = VinlibSerializer

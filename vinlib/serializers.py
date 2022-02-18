@@ -1,6 +1,19 @@
 from rest_framework import serializers
 from vinlib.models import Vinlib, LANGUAGE_CHOICES, STYLE_CHOICES
 
+from django.contrib.auth.models import User
+
+
+owner = serializers.ReadOnlyField(source='owner.username')
+
+class UserSerializer(serializers.ModelSerializer):
+    vinlib = serializers.PrimaryKeyRelatedField(many=True, queryset=Vinlib.objects.all())
+
+    class Meta:
+        model = User
+        fields = ['id', 'username', 'vinlib']
+
+
 class VinlibSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vinlib
